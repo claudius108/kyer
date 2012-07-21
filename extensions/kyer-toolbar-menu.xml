@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet xmlns="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:kyer="http://kuberam.ro/ns/kyer" version="1.0">
+    <xsl:output method="xml"/>
+    <xsl:template match="kyer:menu">
+        <xsl:element name="div">
+            <xsl:copy-of select="@*"/>
+            <xsl:attribute name="class">fg-toolbar ui-widget-header ui-corner-all ui-helper-clearfix</xsl:attribute>
+            <xsl:apply-templates/>
+        </xsl:element>
+    </xsl:template>
+    <xsl:template match="kyer:optionset">
+        <xsl:variable name="selectionCSSClasses">
+            <xsl:choose>
+                <xsl:when test="@selection='none'">fg-buttonset ui-helper-clearfix</xsl:when>
+                <xsl:when test="@selection='single'">fg-buttonset fg-buttonset-single ui-helper-clearfix</xsl:when>
+            </xsl:choose>
+        </xsl:variable>
+        <xsl:element name="div">
+            <xsl:copy-of select="@*"/>
+            <xsl:attribute name="class">
+                <xsl:value-of select="$selectionCSSClasses"/>
+            </xsl:attribute>
+            <xsl:choose>
+                <xsl:when test="@type='drop-down'">
+                    <button class="kyer-dd-menu-button fg-button ui-state-default ui-priority-primary ui-corner-all" onclick="this.parentNode.querySelector('.kyer-dd-menu-options-set').style.display = 'inline';">
+                        <xsl:value-of select="kyer:label"/>
+                    </button>
+                    <div class="kyer-dd-menu-options-container">
+                        <div onMouseOut="kyer.ui.fadeOut(this);" class="kyer-dd-menu-options-set ui-widget-header ui-corner-all ui-helper-clearfix" style="display: none;">
+                            <xsl:apply-templates select="kyer:option"/>
+                        </div>
+                    </div>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:apply-templates select="kyer:option"/>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:element>
+    </xsl:template>
+    <xsl:template match="kyer:option">
+        <xsl:variable name="selection" select="./parent::*/@selection"/>
+        <xsl:variable name="selectionCSSClassesModel">fg-button ui-state-default ui-priority-primary</xsl:variable>
+        <xsl:variable name="selectionCSSClasses">
+            <xsl:choose>
+                <xsl:when test="$selection = 'none'">
+                    <xsl:value-of select="concat($selectionCSSClassesModel, ' ui-corner-all')"/>
+                </xsl:when>
+                <xsl:when test="$selection = 'single'">
+                    <xsl:choose>
+                        <xsl:when test="count(preceding-sibling::*[local-name() = 'option']) = 0">
+                            <xsl:value-of select="concat($selectionCSSClassesModel, ' ui-corner-left')"/>
+                        </xsl:when>
+                        <xsl:when test="count(preceding-sibling::*[local-name() = 'option']) + 1 = count(./parent::*/*)">
+                            <xsl:value-of select="concat($selectionCSSClassesModel, ' ui-corner-right')"/>
+                        </xsl:when>
+                        <xsl:when test="count(preceding-sibling::*[local-name() = 'option']) &gt; 0">
+                            <xsl:value-of select="$selectionCSSClassesModel"/>
+                        </xsl:when>
+                    </xsl:choose>
+                </xsl:when>
+            </xsl:choose>
+        </xsl:variable>
+        <xsl:choose>
+            <xsl:when test="contains('text-button image-button', @appearance)">
+                <button id="{@id}" class="{$selectionCSSClasses}" onclick="{@command}" title="{@title}">
+                    <xsl:copy-of select="@*"/>
+                    <xsl:choose>
+                        <xsl:when test="*[local-name() = 'label']/*">
+                            <xsl:copy-of select="*[local-name() = 'label']/*"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:value-of select="*[local-name() = 'label']/text()"/>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </button>
+            </xsl:when>
+        </xsl:choose>
+    </xsl:template>
+</xsl:stylesheet>
