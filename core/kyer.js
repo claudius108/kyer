@@ -11,18 +11,17 @@ $(document).ready(function() {
 	kyer.initialize.menu('context');
 
 	//construct UI elements
-	$("*[appearance^='kyer-']").each(function(index) {
+	$("*[appearance ^= 'kyer-']").each(function(index) {
 		var element = $(this);
+		var appearance = element.attr('appearance');
 		element.replaceWith($x.serializeToString(kyer.construct.menu($x.xpath("simpath:instance('menus')//kyer:menu[@id = '" + element.attr('id') + "']")[0])));
-	});
-	
-	var contextMenu = $("*[appearance='kyer-context-menu']");
-	
-	$(contextMenu.attr('container')).contextMenu(
-		{
-			menu: "context-items-for-" + contextMenu.attr('id')
+		if (appearance == 'kyer-context-menu') {
+		  var contextMenu = $("#context-items-for-" + element.attr("id"));
+		  $(contextMenu.attr('container')).contextMenu({
+		    menu: contextMenu.attr('id')
+		  });
 		}
-	);	
+	});
 	
 	$(".fg-button:not(.ui-state-disabled)")
 		.hover(
