@@ -139,7 +139,8 @@ window.kyer = {
 };
 //set the module's base URL
 (function(sModuleName, sModuleNS) {
-	window[sModuleNS ? sModuleNS : sModuleName].utils.baseURI = document.querySelector("script[src*='" + sModuleName + "']").src.match(new RegExp("^(.)*(/)?" + sModuleName + "/"))[0];
+	var scriptUri = document.querySelector("script[src*='" + sModuleName + "']").src;
+	window[sModuleNS ? sModuleNS : sModuleName].utils.baseURI = scriptUri.substring(0, scriptUri.indexOf("core/" + sModuleName + ".js"));
 })('kyer');
 
 			//process menu element
