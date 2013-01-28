@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kert:test-plan xmlns="http://www.w3.org/1999/xhtml" xmlns:kert="http://kuberam.ro/ns/kert" xml:base="unit-tests/" test-plan-version="0.4">
+	<kert:description>Test plan for kyer</kert:description>
+	<kert:version>0.1</kert:version>
+	<kert:results>
+		<!--start of standard results - do not remove them -->
+		<kert:result id="passed" icon-url="../resources/images/passed.png" font-color="white" background-color="green"
+			score="0">Passed</kert:result>
+		<kert:result id="failed" icon-url="../resources/images/failed.png" font-color="white" background-color="red"
+			score="0">Failed</kert:result>
+		<kert:result id="unfound" icon-url="" font-color="white" background-color="black" score="0">Unfound
+		</kert:result>
+		<kert:result id="undefined" icon-url="" font-color="white" background-color="black" score="0">Undefined
+			result
+			token
+		</kert:result>
+		<!--end of standard results - do not remove them -->
+		<kert:result id="partial" icon-url="" font-color="white" background-color="yellow" score="0">Partial
+		</kert:result>
+		<kert:result id="unknown" icon-url="" font-color="black" background-color="white" score="0">Unknown
+		</kert:result>
+		<kert:result id="deprecated" icon-url="" font-color="white" background-color="green" score="0">Deprecated
+		</kert:result>
+		<kert:result id="timeout" icon-url="" font-color="white" background-color="green" score="0">Timeout
+		</kert:result>
+	</kert:results>
+	<kert:test id="parse-xqueryx-script">
+		<kert:author>Claudius Teodorescu</kert:author>
+		<kert:title>Parsing an XQueryX script</kert:title>
+		<kert:version>0.1</kert:version>
+		<kert:description>
+			Testing parsing of XQueryX script that is inline in a HTML script element, or online (retrieved
+			using the @src of a HTML
+			script element).
+		</kert:description>
+		<kert:test-url>http://localhost/tests/kyer/unit-tests/parse-xqueryx-script/parse-xqueryx-script.html</kert:test-url>
+		<kert:source-url></kert:source-url>
+		<kert:assertion>//result-token</kert:assertion>
+		<kert:timeout />
+		<kert:run-status timestamp="" />
+		<kert:development-status timestamp="" />
+		<kert:log />
+		<kert:loops-number />
+		<kert:total-test-time />
+		<kert:type>unattended</kert:type>
+		<kert:assertion-type>assert-xml</kert:assertion-type>
+	</kert:test>
+	<kert:test id="transform-xqueryx-ast-to-javascript">
+		<kert:author>Claudius Teodorescu</kert:author>
+		<kert:title>Transform XQueryX AST to Javascript</kert:title>
+		<kert:version>0.1</kert:version>
+		<kert:description>
+			Testing transform of XQueryX AST to Javascript.
+		</kert:description>
+		<kert:test-url>http://localhost/tests/kyer/unit-tests/transform-xqueryx-ast-to-javascript/transform-xqueryx-ast-to-javascript.html
+		</kert:test-url>
+		<kert:source-url></kert:source-url>
+		<kert:assertion>//result-token</kert:assertion>
+		<kert:timeout />
+		<kert:run-status timestamp="" />
+		<kert:development-status timestamp="" />
+		<kert:log />
+		<kert:loops-number />
+		<kert:total-test-time />
+		<kert:type>unattended</kert:type>
+		<kert:assertion-type>assert-xml</kert:assertion-type>
+	</kert:test>
+	<kert:test id="render-toolbar-menu">
+		<kert:author>Claudius Teodorescu</kert:author>
+		<kert:title>Render a toolbar menu</kert:title>
+		<kert:version>0.1</kert:version>
+		<kert:description>
+			Testing rendering of a toolbar menu.
+		</kert:description>
+		<kert:test-url>render-toolbar-menu.html
+		</kert:test-url>
+		<kert:source-url></kert:source-url>
+		<kert:assertion>//result-token</kert:assertion>
+		<kert:timeout />
+		<kert:run-status timestamp="" />
+		<kert:development-status timestamp="" />
+		<kert:log />
+		<kert:loops-number />
+		<kert:total-test-time />
+		<kert:type>unattended</kert:type>
+		<kert:assertion-type>assert-xml</kert:assertion-type>
+	</kert:test>
+	<kert:traceability-matrix />
+	<kert:test-tree>
+		<ul id="data">
+			<li class="folder">
+				Performance tests
+				<ul>
+					<li id="tree-parse-xqueryx-script">Parsing an XQueryX script</li>
+					<li id="tree-transform-xqueryx-ast-to-javascript">Transform XQueryX AST to Javascript</li>
+					<li id="tree-render-toolbar-menu">Render a toolbar menu</li>
+				</ul>
+			</li>
+		</ul>
+	</kert:test-tree>
+</kert:test-plan>
