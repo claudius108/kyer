@@ -1,0 +1,30 @@
+<project name="teian" basedir="." default="transform-xquery-scripts">
+	<import file="/home/claudius/workspace-claudius/_commons/_workspace/build.xml" />
+
+	<taskdef resource="net/sf/antcontrib/antcontrib.properties" />
+
+	<target name="setVar">
+		
+		<property name="xquery-script-name" value="${file-name}" />
+		<propertyregex property="xqueryx-script-name" input="${xquery-script-name}" regexp="[\\.]xq$" replace="-xqx.xml" global="true" />
+
+		<exec executable="java" newenvironment="true" dir="/home/claudius/eXist/tools/wrapper/bin">
+			<arg line="-jar ${kuberam.commons.dir}/xquery-to-xqueryx.jar ${xquery-script-name} ${xquery-script-name}x" />
+		</exec>
+
+	</target>
+
+	<target name="transform-xquery-scripts" description="Transform all XQuery scripts">
+		
+		<foreach target="setVar" param="file-name">
+			<path>
+				<fileset id="scripts" dir=".">
+					<modified update="false" />
+					<include name="*.xq" />
+				</fileset>
+			</path>
+		</foreach>
+		
+	</target>
+
+</project>
