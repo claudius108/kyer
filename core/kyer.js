@@ -6,7 +6,6 @@
 $(document).ready(function() {
 	//check for existence of UI elements to be constructed, and
 	//load all necessary data
-	kyer.initialize.menu('context');
 
 	//construct UI elements
 	$("*[data-kyerType]").each(function(index) {
@@ -60,23 +59,7 @@ window.kyer = {
 	},
 	"bind" : function() {
 	},
-	"construct" : {
-		"menu" : function(oMenuElement) {
-			//get the menu type
-			var sMenuType = oMenuElement.getAttribute('type');
-			//process oMenuElement
-			if (oMenuElement.nodeType == 1) {
-				var sMenuElement = $x.serializeToString(oMenuElement).replace(/xmlns="http:\/\/www.w3.org\/1999\/xhtml"/, "")
-				, sPrefix = sMenuElement.substring(1, sMenuElement.indexOf(':'))
-				, sNSs = $x.utils.sNSs
-				, sNS = sNSs.substring(sNSs.indexOf("xmlns:" + sPrefix + "=\""))
-				;
-				sNS = sNS.substring(0, sNS.indexOf(" "));
-				oMenuElement = $x.parseFromString(sMenuElement);
-			}
-			return $x.transform(oMenuElement, $x._instances['kyer-' + sMenuType + '-menu-xsl']).documentElement;
-		}
-		
+	"construct" : {		
 	},
 	"initialize" : {
 		"menu" : function(sMenuType) {
