@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<kert:test-plan xmlns="http://www.w3.org/1999/xhtml" xmlns:kert="http://kuberam.ro/ns/kert" xml:base="unit-tests/" test-plan-version="0.4">
+<kert:test-plan xmlns="http://www.w3.org/1999/xhtml" xmlns:kert="http://kuberam.ro/ns/kert" xml:base="unit-tests/"
+	test-plan-version="0.4">
 	<kert:description>Test plan for kyer</kert:description>
 	<kert:version>0.1</kert:version>
 	<kert:results>
@@ -33,7 +34,7 @@
 			using the @src of a HTML
 			script element).
 		</kert:description>
-		<kert:test-url>http://localhost/tests/kyer/unit-tests/parse-xqueryx-script/parse-xqueryx-script.html</kert:test-url>
+		<kert:test-url>parse-xqueryx-script/parse-xqueryx-script.html</kert:test-url>
 		<kert:source-url></kert:source-url>
 		<kert:assertion>//result-token</kert:assertion>
 		<kert:timeout />
@@ -49,11 +50,8 @@
 		<kert:author>Claudius Teodorescu</kert:author>
 		<kert:title>Transform XQueryX AST to Javascript</kert:title>
 		<kert:version>0.1</kert:version>
-		<kert:description>
-			Testing transform of XQueryX AST to Javascript.
-		</kert:description>
-		<kert:test-url>http://localhost/tests/kyer/unit-tests/transform-xqueryx-ast-to-javascript/transform-xqueryx-ast-to-javascript.html
-		</kert:test-url>
+		<kert:description>Testing transform of XQueryX AST to Javascript.</kert:description>
+		<kert:test-url>transform-xqueryx-ast-to-javascript/transform-xqueryx-ast-to-javascript.html</kert:test-url>
 		<kert:source-url></kert:source-url>
 		<kert:assertion>//result-token</kert:assertion>
 		<kert:timeout />
@@ -68,12 +66,43 @@
 	<kert:test id="render-toolbar-menu">
 		<kert:author>Claudius Teodorescu</kert:author>
 		<kert:title>Render a toolbar menu</kert:title>
+		<kert:version>0.2</kert:version>
+		<kert:description>Testing rendering of a toolbar menu.</kert:description>
+		<kert:test-url>render-toolbar-menu.html</kert:test-url>
+		<kert:source-url></kert:source-url>
+		<kert:assertion>//result-token</kert:assertion>
+		<kert:timeout />
+		<kert:run-status timestamp="" />
+		<kert:development-status timestamp="" />
+		<kert:log />
+		<kert:loops-number />
+		<kert:total-test-time />
+		<kert:type>unattended</kert:type>
+		<kert:assertion-type>assert-xml</kert:assertion-type>
+	</kert:test>
+	<kert:test id="render-context-menu">
+		<kert:author>Claudius Teodorescu</kert:author>
+		<kert:title>Render a context menu</kert:title>
 		<kert:version>0.1</kert:version>
-		<kert:description>
-			Testing rendering of a toolbar menu.
-		</kert:description>
-		<kert:test-url>render-toolbar-menu.html
-		</kert:test-url>
+		<kert:description>Testing rendering of a context menu.</kert:description>
+		<kert:test-url>render-context-menu.html</kert:test-url>
+		<kert:source-url></kert:source-url>
+		<kert:assertion>//result-token</kert:assertion>
+		<kert:timeout />
+		<kert:run-status timestamp="" />
+		<kert:development-status timestamp="" />
+		<kert:log />
+		<kert:loops-number />
+		<kert:total-test-time />
+		<kert:type>unattended</kert:type>
+		<kert:assertion-type>assert-xml</kert:assertion-type>
+	</kert:test>
+	<kert:test id="render-vertical-menu">
+		<kert:author>Claudius Teodorescu</kert:author>
+		<kert:title>Render a vertical menu</kert:title>
+		<kert:version>0.1</kert:version>
+		<kert:description>Testing rendering of a vertical menu.</kert:description>
+		<kert:test-url>render-vertical-menu.html</kert:test-url>
 		<kert:source-url></kert:source-url>
 		<kert:assertion>//result-token</kert:assertion>
 		<kert:timeout />
@@ -94,6 +123,8 @@
 					<li id="tree-parse-xqueryx-script">Parsing an XQueryX script</li>
 					<li id="tree-transform-xqueryx-ast-to-javascript">Transform XQueryX AST to Javascript</li>
 					<li id="tree-render-toolbar-menu">Render a toolbar menu</li>
+					<li id="tree-render-context-menu">Render a context menu</li>
+					<li id="tree-render-vertical-menu">Render a vertical menu</li>
 				</ul>
 			</li>
 		</ul>
