@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:kyer="http://kuberam.ro/ns/kyer">
+    <head>
+    	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Render a context menu</title>
+        <script type="text/javascript" charset="utf-8" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">/**/</script>
+        <script type="text/javascript" charset="utf-8" src="http://simpath.sourceforge.net/latest/core/simpath.js">/**/</script>
+        <script type="text/javascript" charset="utf-8" src="render-menu.js">/**/</script>
+
+		<!-- dependencies for the context menu -->
+		<script type="text/javascript" charset="utf-8" src="http://medialize.github.com/jQuery-contextMenu/src/jquery.contextMenu.js">/**/</script>
+		<link rel="stylesheet" type="text/css" href="http://medialize.github.com/jQuery-contextMenu/src/jquery.contextMenu.css"/>
+        
+        <!--dependencies for kyer-->
+        <script type="text/javascript" charset="utf-8" src="../../core/kyer.js">/**/</script>        
+	</head>
+    <body>
+		<menu id="teian-context-menu" type="context" style="display:none" data-kyerType="context-menu"></menu>
+		<h4 id="container-for-teian-context-menu" contextmenu="teian-context-menu">Right click here for the context menu.</h4>	
+    </body>
+</html>
