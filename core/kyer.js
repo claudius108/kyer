@@ -8,11 +8,11 @@ $(document).ready(function() {
 	//load all necessary data
 
 	//construct UI elements
-	$("*[data-kyerType]").each(function(index) {
-		var element = $(this);
-		var type = element.attr('data-kyerType');
-		var elementId  = element.attr('id');
-		element.replaceWith($x.serializeToString($x.xpath("simpath:instance('menus')//*[@id = '" + elementId + "']")[0]));		
+	for (var i = 0; (element = document.querySelectorAll("*[data-kyerType]")[i]); i++) {
+		var type = element.getAttribute('data-kyerType');
+		var elementId = element.id;
+		element.parentNode.replaceChild($x.xpath("simpath:instance('menus')//*[@id = '" + elementId + "']")[0], element);
+		document.getElementById(elementId).className = "kyer-toolbar-menu";		
 		switch(type) {
 			case 'context-menu':
 			    $.contextMenu({
@@ -23,7 +23,7 @@ $(document).ready(function() {
 			case 'toolbar-menu':
 			break;		
 		}
-	});
+	}	
 
 	//select a list of all element having @ref attribute
 	var oElements = document.body.querySelectorAll("*[ref]");
@@ -50,7 +50,7 @@ $(document).ready(function() {
 });
 
 window.kyer = {
-	"version" : "0.3",
+	"version" : "0.4",
 	"utils" : {},
 	"refresh" : function() {
 		for (var i = 0; (element = document.body.querySelectorAll("*[ref]")[i]); i++) {
