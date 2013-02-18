@@ -1,5 +1,4 @@
 $(document).ready(function() {
-	  // load kyer-toolbar-menu
 	  $x.submission({
 	    "ref" : "simpath:instance('menus')",
 	    "resource" : "../resources/menus-01.xml",

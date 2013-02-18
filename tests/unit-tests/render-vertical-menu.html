@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:kyer="http://kuberam.ro/ns/kyer">
+    <head>
+    	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Render a toolbar menu</title>
+        <script type="text/javascript" charset="utf-8" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">/**/</script>
+        <script type="text/javascript" charset="utf-8" src="http://simpath.sourceforge.net/latest/core/simpath.js">/**/</script>
+        <script type="text/javascript" charset="utf-8" src="render-menu.js">/**/</script>
+
+        <!--dependencies for kyer-->
+        <link rel="stylesheet" type="text/css" href="../../extensions/kyer-toolbar-menu.css"/>        
+        <script type="text/javascript" charset="utf-8" src="../../core/kyer.js">/**/</script>        
+	</head>
+    <body>
+		<menu id="teian-vertical-menu" type="list" style="display:none" data-kyerType="vertical-menu"></menu>
+
+		<menu class="kyer-vertical-menu">
+		    <ul>
+		        <li><a href="#">Home</a>
+		            <ul class="sub-level">
+		                <li><a href="#">Sub Menu Item 1</a>
+		                </li>
+		                <li>
+		                    <a href="#">Sub Menu Item 2</a>
+		                    <ul class="sub-level">
+		                        <li><a href="#">Sub Sub Menu Item 1</a></li>
+		                        <li><a href="#">Sub Sub Menu Item 2</a></li>
+		                        <li><a href="#">Sub Sub Menu Item 3</a></li>
+		                        <li><a href="#">Sub Sub Menu Item 4</a></li>
+		                    </ul>
+		                </li>
+		                <li><a href="#">Sub Menu Item 3</a></li>
+		                <li><a href="#">Sub Menu Item 3</a></li>
+		            </ul>
+		        </li>
+		        <li><a href="#">About</a></li>
+		        <li><a href="#">Contact</a></li>
+		        <li>
+		            <a href="#">FAQ</a>
+		            <ul class="sub-level">
+		                <li><a href="#">Sub Menu Item 1</a></li>
+		                <li>
+		                    <a href="#">Sub Menu Item 3</a>
+		                    <ul class="sub-level">
+		                        <li><a href="#">Sub Sub Menu Item 1</a></li>
+		                        <li><a href="#">Sub Sub Menu Item 2</a></li>
+		                        <li><a href="#">Sub Sub Menu Item 3</a></li>
+		                        <li><a href="#">Sub Sub Menu Item 4</a></li>
+		                    </ul>
+		                </li>
+		            </ul>
+		        </li>
+		        <li>
+		            <a href="#">News</a>
+		            <ul class="sub-level">
+		                <li><a href="#">Sub Menu Item 1</a>
+		                    <ul class="sub-level">
+		                        <li><a href="#">Sub Sub Menu Item 1</a></li>
+		                        <li><a href="#">Sub Sub Menu Item 2</a></li>
+		                        <li><a href="#">Sub Sub Menu Item 3</a></li>
+		                        <li><a href="#">Sub Sub Menu Item 4</a></li>
+		                    </ul>
+		                </li>
+		                <li><a href="#">Sub Menu Item 2</a></li>
+		                <li><a href="#">Sub Menu Item 3</a></li>
+		            </ul>
+		        </li>
+		    </ul>
+		</menu>
+		
+    </body>
+</html>
