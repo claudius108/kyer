@@ -68,7 +68,7 @@
 		<kert:title>Render a toolbar menu</kert:title>
 		<kert:version>0.2</kert:version>
 		<kert:description>Testing rendering of a toolbar menu.</kert:description>
-		<kert:test-url>render-toolbar-menu.html</kert:test-url>
+		<kert:test-url>toolbar-menu.html</kert:test-url>
 		<kert:source-url></kert:source-url>
 		<kert:assertion>//result-token</kert:assertion>
 		<kert:timeout />
@@ -85,7 +85,7 @@
 		<kert:title>Render a context menu</kert:title>
 		<kert:version>0.1</kert:version>
 		<kert:description>Testing rendering of a context menu.</kert:description>
-		<kert:test-url>render-context-menu.html</kert:test-url>
+		<kert:test-url>context-menu.html</kert:test-url>
 		<kert:source-url></kert:source-url>
 		<kert:assertion>//result-token</kert:assertion>
 		<kert:timeout />
@@ -102,7 +102,7 @@
 		<kert:title>Render a vertical menu</kert:title>
 		<kert:version>0.1</kert:version>
 		<kert:description>Testing rendering of a vertical menu.</kert:description>
-		<kert:test-url>render-vertical-menu.html</kert:test-url>
+		<kert:test-url>vertical-menu.html</kert:test-url>
 		<kert:source-url></kert:source-url>
 		<kert:assertion>//result-token</kert:assertion>
 		<kert:timeout />
