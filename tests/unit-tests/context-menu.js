@@ -1,8 +1,8 @@
 $(document).ready(function() {
 	//load the menus
 	  $x.submission({
-	    "ref" : "simpath:instance('toolbar-menus')",
-	    "resource" : "../resources/toolbar-menu-01.xml",
+	    "ref" : "simpath:instance('context-menus')",
+	    "resource" : "../resources/context-menu-01.xml",
 	    "mode" : "synchronous",
 	    "method" : "get"
 	  });
