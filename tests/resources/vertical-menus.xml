@@ -3,72 +3,95 @@
 	<menu id="teian-vertical-menu">
 		<ul>
 			<li>
-				<a href="#">File</a>
-				<ul>
+				<a href="#">Home</a>
+				<ul class="sub-level">
 					<li>
-						<a href="#">New</a>
+						<a href="#">Sub Menu Item 1</a>
 					</li>
 					<li>
-						<a href="#">Open</a>
-					</li>
-					<li>
-						<a href="#">Close</a>
-					</li>
-					<li>
-						<a href="#">Save</a>
-					</li>
-					<li>
-						<a href="#">Save As...</a>
-					</li>
-				</ul>
-			</li>
-			<li>
-				<a href="#">Actions</a>
-				<ul>
-					<li>
-						<a href="#">Author</a>
-					</li>
-					<li>
-						<a href="#">Source</a>
-					</li>
-					<li>
-						<a href="#">Lock</a>
-					</li>
-					<li>
-						<a href="#">Unlock</a>
-					</li>
-				</ul>
-			</li>
-			<li>
-				<a href="#">Changes</a>
-				<ul>
-					<li>
-						<a href="#">Track</a>
-					</li>
-					<li>
-						<a href="#">Toggle</a>
-					</li>
-				</ul>
-			</li>
-			<li>
-				<a href="#">User Interface</a>
-				<ul>
-					<li>
-						<a href="#">Languages</a>
-						<ul>
+						<a href="#">Sub Menu Item 2</a>
+						<ul class="sub-level">
 							<li>
-								<a href="#">EN</a>
+								<a href="#">Sub Sub Menu Item 1</a>
 							</li>
 							<li>
-								<a href="#">FR</a>
+								<a href="#">Sub Sub Menu Item 2</a>
+							</li>
+							<li>
+								<a href="#">Sub Sub Menu Item 3</a>
+							</li>
+							<li>
+								<a href="#">Sub Sub Menu Item 4</a>
 							</li>
 						</ul>
 					</li>
 					<li>
-						<a href="#">Themes</a>
+						<a href="#">Sub Menu Item 3</a>
+					</li>
+					<li>
+						<a href="#">Sub Menu Item 3</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">About</a>
+			</li>
+			<li>
+				<a href="#">Contact</a>
+			</li>
+			<li>
+				<a href="#">FAQ</a>
+				<ul class="sub-level">
+					<li>
+						<a href="#">Sub Menu Item 1</a>
+					</li>
+					<li>
+						<a href="#">Sub Menu Item 3</a>
+						<ul class="sub-level">
+							<li>
+								<a href="#">Sub Sub Menu Item 1</a>
+							</li>
+							<li>
+								<a href="#">Sub Sub Menu Item 2</a>
+							</li>
+							<li>
+								<a href="#">Sub Sub Menu Item 3</a>
+							</li>
+							<li>
+								<a href="#">Sub Sub Menu Item 4</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">News</a>
+				<ul class="sub-level">
+					<li>
+						<a href="#">Sub Menu Item 1</a>
+						<ul class="sub-level">
+							<li>
+								<a href="#">Sub Sub Menu Item 1</a>
+							</li>
+							<li>
+								<a href="#">Sub Sub Menu Item 2</a>
+							</li>
+							<li>
+								<a href="#">Sub Sub Menu Item 3</a>
+							</li>
+							<li>
+								<a href="#">Sub Sub Menu Item 4</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Sub Menu Item 2</a>
+					</li>
+					<li>
+						<a href="#">Sub Menu Item 3</a>
 					</li>
 				</ul>
 			</li>
 		</ul>
-	</menu>	
+	</menu>
 </menu>
