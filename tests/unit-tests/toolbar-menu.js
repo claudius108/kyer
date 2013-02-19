@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	//load the vertical menu
 	  $x.submission({
-	    "ref" : "simpath:instance('menus')",
+	    "ref" : "simpath:instance('toolbar-menu')",
 	    "resource" : "../resources/menus-01.xml",
 	    "mode" : "synchronous",
 	    "method" : "get"
