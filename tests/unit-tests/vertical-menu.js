@@ -2,7 +2,7 @@ $(document).ready(function() {
 	//load the menus
 	  $x.submission({
 	    "ref" : "simpath:instance('vertical-menus')",
-	    "resource" : "../resources/vertical-menu-01.xml",
+	    "resource" : "../resources/vertical-menus.xml",
 	    "mode" : "synchronous",
 	    "method" : "get"
 	  });

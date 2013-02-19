@@ -2,7 +2,7 @@ $(document).ready(function() {
 	//load the menus
 	  $x.submission({
 	    "ref" : "simpath:instance('context-menus')",
-	    "resource" : "../resources/context-menu-01.xml",
+	    "resource" : "../resources/context-menus.xml",
 	    "mode" : "synchronous",
 	    "method" : "get"
 	  });
