@@ -8,11 +8,13 @@ $(document).ready(function() {
 	//load all necessary data
 
 	//construct UI elements
-	for (var i = 0; (element = document.querySelectorAll("*[data-kyerType]")[i]); i++) {
-		var type = element.getAttribute('data-kyerType');
-		var elementId = element.id;
-		element.parentNode.replaceChild($x.xpath("simpath:instance('menus')//*[@id = '" + elementId + "']")[0], element);
-		document.getElementById(elementId).className = "kyer-toolbar-menu";		
+	var uiElements = document.querySelectorAll("*[data-kyerType]");
+	for (var i = 0, il = uiElements.length; i < il; i++) {
+		var uiElement = uiElements[i];
+		var type = uiElement.getAttribute('data-kyerType');
+		var elementId = uiElement.id;
+		uiElement.parentNode.replaceChild($x.xpath("simpath:instance('"+ type + "s')//*[@id = '" + elementId + "']")[0], uiElement);
+
 		switch(type) {
 			case 'context-menu':
 			    $.contextMenu({
@@ -21,7 +23,11 @@ $(document).ready(function() {
 			    });
 			break;
 			case 'toolbar-menu':
-			break;		
+				document.getElementById(elementId).className = "kyer-menu kyer-toolbar-menu";				
+			break;
+			case 'vertical-menu':
+				document.getElementById(elementId).className = "kyer-menu kyer-vertical-menu";				
+			break;			
 		}
 	}	
 

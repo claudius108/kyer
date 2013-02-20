@@ -1,0 +1,24 @@
+menu.kyer-vertical-menu {
+	width: 150px;
+	font-size: 0.75em;
+}
+
+menu.kyer-vertical-menu a {
+	width: 100%;
+}
+
+menu.kyer-vertical-menu li:hover {
+	position: relative;
+}
+
+menu.kyer-vertical-menu ul li:hover>ul {
+	position: absolute;
+	left: 75px;
+	top: 5px;
+}
+
+menu.kyer-vertical-menu>ul ul li {
+	border: none;
+	float: left;
+	width: 150px;
+}

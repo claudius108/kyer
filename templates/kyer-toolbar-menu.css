@@ -1,28 +1,8 @@
-menu.kyer-toolbar-menu,ul,li {
-	margin: 0;
-	padding: 0;
-	border: 0;
-}
-
 menu.kyer-toolbar-menu>ul {
 	width: 100%;
 }
 
-menu.kyer-toolbar-menu ul ul {
-	display: none;
-}
-
-menu.kyer-toolbar-menu ul li:hover>ul {
-	display: block;
-}
-
 menu.kyer-toolbar-menu ul {
-	background: #efefef;
-	background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);
-	background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%);
-	background: -webkit-linear-gradient(top, #efefef 0%, #bbbbbb 100%);
-	box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.15);
-	list-style: none;
 	position: relative;
 	display: inline-table;
 }
@@ -35,24 +15,6 @@ menu.kyer-toolbar-menu ul:after {
 
 menu.kyer-toolbar-menu ul li {
 	float: left;
-}
-
-menu.kyer-toolbar-menu ul li:hover {
-	background: #4b545f;
-	background: linear-gradient(top, #4f5964 0%, #5f6975 40%);
-	background: -moz-linear-gradient(top, #4f5964 0%, #5f6975 40%);
-	background: -webkit-linear-gradient(top, #4f5964 0%, #5f6975 40%);
-}
-
-menu.kyer-toolbar-menu ul li:hover a {
-	color: #fff;
-}
-
-menu.kyer-toolbar-menu ul li a {
-	display: block;
-	padding: 5px 40px;
-	color: #757575;
-	text-decoration: none;
 }
 
 menu.kyer-toolbar-menu ul ul {
@@ -70,11 +32,6 @@ menu.kyer-toolbar-menu ul ul li {
 	position: relative;
 }
 
-menu.kyer-toolbar-menu ul ul li a {
-	padding: 15px 40px;
-	color: #fff;
-}
-
 menu.kyer-toolbar-menu ul ul li a:hover {
 	background: #4b545f;
 }
@@ -83,89 +40,4 @@ menu.kyer-toolbar-menu ul ul ul {
 	position: absolute;
 	left: 100%;
 	top: 0;
-}
-
-
-
-
-
-menu.kyer-vertical-menu {
-	width: 150px;
-	font-size: 0.75em;
-}
-
-menu.kyer-vertical-menu,ul,li {
-	margin: 0;
-	padding: 0;
-	border: 0;
-}
-
-menu.kyer-vertical-menu>ul {
-	background: #666;
-}
-
-menu.kyer-vertical-menu li {
-	list-style: none;
-}
-
-menu.kyer-vertical-menu>ul li {
-	border-bottom: #fff solid;
-	border-top: #fff solid;
-	border-width: 1px;
-}
-
-menu.kyer-vertical-menu a {
-	color: #fff;
-	cursor: pointer;
-	display: block;
-	height: 25px;
-	line-height: 25px;
-	text-indent: 10px;
-	text-decoration: none;
-	width: 100%;
-}
-
-menu.kyer-vertical-menu a:hover {
-	text-decoration: underline;
-}
-
-menu.kyer-vertical-menu li:hover {
-	background: #f90;
-	position: relative;
-}
-
-ul.sub-level {
-	display: none;
-}
-
-li:hover .sub-level {
-	background: #999;
-	border: #fff solid;
-	border-width: 1px;
-	display: block;
-	position: absolute;
-	left: 75px;
-	top: 5px;
-}
-
-ul.sub-level li {
-	border: none;
-	float: left;
-	width: 150px;
-}
-
-menu.kyer-vertical-menu .sub-level {
-	background: #999;
-}
-
-menu.kyer-vertical-menu .sub-level .sub-level {
-	background: #09C;
-}
-
-li:hover .sub-level .sub-level {
-	display: none;
-}
-
-.sub-level li:hover .sub-level {
-	display: block;
 }
