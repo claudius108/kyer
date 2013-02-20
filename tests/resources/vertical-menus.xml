@@ -4,13 +4,13 @@
 		<ul>
 			<li>
 				<a href="#">Home</a>
-				<ul class="sub-level">
+				<ul>
 					<li>
 						<a href="#">Sub Menu Item 1</a>
 					</li>
 					<li>
 						<a href="#">Sub Menu Item 2</a>
-						<ul class="sub-level">
+						<ul>
 							<li>
 								<a href="#">Sub Sub Menu Item 1</a>
 							</li>
@@ -41,13 +41,13 @@
 			</li>
 			<li>
 				<a href="#">FAQ</a>
-				<ul class="sub-level">
+				<ul>
 					<li>
 						<a href="#">Sub Menu Item 1</a>
 					</li>
 					<li>
 						<a href="#">Sub Menu Item 3</a>
-						<ul class="sub-level">
+						<ul>
 							<li>
 								<a href="#">Sub Sub Menu Item 1</a>
 							</li>
@@ -66,10 +66,10 @@
 			</li>
 			<li>
 				<a href="#">News</a>
-				<ul class="sub-level">
+				<ul>
 					<li>
 						<a href="#">Sub Menu Item 1</a>
-						<ul class="sub-level">
+						<ul>
 							<li>
 								<a href="#">Sub Sub Menu Item 1</a>
 							</li>
