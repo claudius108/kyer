@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	//load the menus
+	//load the menus	
 	  $x.submission({
 	    "ref" : "simpath:instance('vertical-menus')",
 	    "resource" : "../resources/vertical-menus.xml",
