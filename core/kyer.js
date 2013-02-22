@@ -14,6 +14,8 @@ $(document).ready(function() {
 		var type = uiElement.getAttribute('data-kyerType');
 		var elementId = uiElement.id;
 		uiElement.parentNode.replaceChild($x.xpath("simpath:instance('"+ type + "s')//*[@id = '" + elementId + "']")[0], uiElement);
+		var newUiElement = document.getElementById(elementId);
+		newUiElement.setAttribute("data-kyerType", type);
 
 		switch(type) {
 			case 'context-menu':
@@ -23,10 +25,10 @@ $(document).ready(function() {
 			    });
 			break;
 			case 'toolbar-menu':
-				document.getElementById(elementId).className = "kyer-menu kyer-toolbar-menu";				
+				newUiElement.className = "kyer-menu kyer-toolbar-menu";				
 			break;
 			case 'vertical-menu':
-				document.getElementById(elementId).className = "kyer-menu kyer-vertical-menu";				
+				newUiElement.className = "kyer-menu kyer-vertical-menu";				
 			break;			
 		}
 	}	
