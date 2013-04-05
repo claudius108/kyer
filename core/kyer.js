@@ -3,6 +3,7 @@
  * By Claudius Teodorescu
  * Licensed under LGPL.
  */
+
 $(document).ready(function() {
 	//check for existence of UI elements to be constructed, and
 	//load all necessary data
@@ -13,7 +14,7 @@ $(document).ready(function() {
 		var uiElement = uiElements[i];
 		var type = uiElement.getAttribute('data-kyerType');
 		var elementId = uiElement.id;
-		uiElement.parentNode.replaceChild($x.xpath("simpath:instance('"+ type + "s')//*[@id = '" + elementId + "']")[0], uiElement);
+		uiElement.parentNode.replaceChild($x.xpath(uiElement.getAttribute("ref"))[0], uiElement);
 		var newUiElement = document.getElementById(elementId);
 		newUiElement.setAttribute("data-kyerType", type);
 
