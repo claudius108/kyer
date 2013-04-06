@@ -9,27 +9,27 @@ $(document).ready(function() {
 	//load all necessary data
 
 	//construct UI elements
-	var uiElements = document.querySelectorAll("*[data-kyerType]");
+	var uiElements = document.querySelectorAll("*[ref]");
 	for (var i = 0, il = uiElements.length; i < il; i++) {
 		var uiElement = uiElements[i];
-		var type = uiElement.getAttribute('data-kyerType');
+		var type = uiElement.type;
 		var elementId = uiElement.id;
-		uiElement.parentNode.replaceChild($x.xpath(uiElement.getAttribute("ref"))[0], uiElement);
-		var newUiElement = document.getElementById(elementId);
-		newUiElement.setAttribute("data-kyerType", type);
+		var templateElement = $x.xpath(uiElement.getAttribute("ref"))[0].cloneNode(true);
+		uiElement.parentNode.replaceChild(templateElement, uiElement);
 
 		switch(type) {
-			case 'context-menu':
+			case 'context':
+				templateElement.id = elementId;
 			    $.contextMenu({
 			    	"selector": "#" + document.querySelector("*[contextmenu = '" + elementId + "']").id,
 			    	"items": $.contextMenu.fromMenu($('#' + elementId))
 			    });
 			break;
-			case 'toolbar-menu':
-				newUiElement.className = "kyer-menu kyer-toolbar-menu";				
+			case 'toolbar':
+				templateElement.className = "kyer-menu kyer-toolbar-menu";				
 			break;
-			case 'vertical-menu':
-				newUiElement.className = "kyer-menu kyer-vertical-menu";				
+			case 'list':
+				templateElement.className = "kyer-menu kyer-vertical-menu";				
 			break;			
 		}
 	}	
