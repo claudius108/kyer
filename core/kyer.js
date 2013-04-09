@@ -14,7 +14,9 @@ $(document).ready(function() {
 		var uiElement = uiElements[i];
 		var type = uiElement.type;
 		var elementId = uiElement.id;
-		var templateElement = $x.xpath(uiElement.getAttribute("ref"))[0].cloneNode(true);
+		var ref = uiElement.getAttribute("ref");
+		var templateElement = $x.xpath(ref)[0].cloneNode(true);
+		templateElement.setAttribute("ref", ref);
 		uiElement.parentNode.replaceChild(templateElement, uiElement);
 
 		switch(type) {
