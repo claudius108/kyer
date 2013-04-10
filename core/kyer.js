@@ -12,6 +12,9 @@ $(document).ready(function() {
 	var uiElements = document.querySelectorAll("*[ref]");
 	for (var i = 0, il = uiElements.length; i < il; i++) {
 		var uiElement = uiElements[i];
+		if (uiElement.namespaceURI != 'http://www.w3.org/1999/xhtml') {
+			continue;
+		}
 		var type = uiElement.type;
 		var elementId = uiElement.id;
 		var ref = uiElement.getAttribute("ref");
