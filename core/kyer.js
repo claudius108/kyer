@@ -15,7 +15,7 @@ $(document).ready(function() {
 		if (uiElement.namespaceURI != 'http://www.w3.org/1999/xhtml') {
 			continue;
 		}
-		var type = uiElement.type;
+		var type = uiElement.getAttribute('type');
 		var elementId = uiElement.id;
 		var ref = uiElement.getAttribute("ref");
 		var templateElement = $x.xpath(ref)[0].cloneNode(true);
