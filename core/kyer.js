@@ -19,6 +19,7 @@ $(document).ready(function() {
 		var elementId = uiElement.id;
 		var ref = uiElement.getAttribute("ref");
 		var templateElement = $x.xpath(ref)[0].cloneNode(true);
+		templateElement.setAttribute("id", elementId);
 		templateElement.setAttribute("ref", ref);
 		uiElement.parentNode.replaceChild(templateElement, uiElement);
 
