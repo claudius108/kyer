@@ -9,7 +9,7 @@ $(document).ready(function() {
 	//load all necessary data
 
 	//construct UI elements
-	var uiElements = document.querySelectorAll("*[ref]");
+	var uiElements = document.querySelectorAll("menu[ref]");
 	for (var i = 0, il = uiElements.length; i < il; i++) {
 		var uiElement = uiElements[i];
 		if (uiElement.namespaceURI != 'http://www.w3.org/1999/xhtml') {
